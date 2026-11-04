@@ -51,3 +51,27 @@ footer > img.footer-photo{
     flex-basis:38px!important;
   }
 }
+
+
+/* Portrait replacing the hero monogram */
+.hero-portrait{
+  display:block;
+  width:auto;
+  height:auto;
+  max-width:100%;
+  max-height:360px;
+  object-fit:contain;
+  object-position:center;
+  margin:auto;
+}
+@media(max-width:700px){
+  .hero-aside{
+    height:auto;
+    min-height:0;
+    padding:22px 0;
+  }
+  .hero-portrait{
+    max-height:320px;
+    max-width:min(100%, 300px);
+  }
+}

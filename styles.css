@@ -79,3 +79,34 @@ footer > img.footer-photo{
 /* Highlight the pioneering workshop statement in the hero */
 .pioneer-note{display:inline-block;margin:0 0 12px;padding:7px 13px;border-inline-start:3px solid var(--purple);background:var(--soft);color:var(--purple);font-size:14px;font-weight:700;line-height:1.8}
 @media(max-width:700px){.pioneer-note{font-size:12px}}
+
+
+/* Refaah Library — editorial book showcase */
+.library-section{display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.9fr);gap:28px 54px;align-items:center;background:#f7f6f8}
+.library-heading{grid-column:1/-1;max-width:760px}
+.library-heading h2{margin:8px 0 12px;font-size:clamp(30px,4vw,46px);letter-spacing:-.03em}
+.library-intro{max-width:690px;color:var(--muted);font-size:16px;line-height:2}
+.library-feature{display:block;position:relative;overflow:hidden;border-radius:18px;background:#171717;box-shadow:0 18px 48px rgba(25,18,30,.12);text-decoration:none}
+.library-feature img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .5s ease}
+.library-feature:hover img{transform:scale(1.025)}
+.library-feature-caption{position:absolute;inset:auto 0 0;padding:34px 20px 17px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.72));font-size:13px}
+.library-books{display:grid;gap:16px}
+.library-book{display:grid;grid-template-columns:112px minmax(0,1fr);gap:18px;align-items:center;padding:14px;background:#fff;border:1px solid var(--line);border-radius:14px}
+.library-book img{display:block;width:112px;height:142px;object-fit:cover;object-position:center;border-radius:8px;background:#eee}
+.library-book h3{margin:5px 0 7px;font-size:18px;line-height:1.5}
+.library-book p{margin:0;color:var(--muted);font-size:13px;line-height:1.9}
+.library-action{grid-column:1/-1;display:flex;align-items:center;justify-content:space-between;gap:18px;padding-top:5px}
+.library-action p{margin:0;color:var(--muted);font-size:14px}
+.library-action .button{white-space:nowrap}
+@media(max-width:760px){
+ .library-section{grid-template-columns:1fr;gap:22px;padding-inline:22px}
+ .library-heading{grid-column:auto}
+ .library-feature img{aspect-ratio:4/3}
+ .library-books{gap:12px}
+ .library-book{grid-template-columns:92px minmax(0,1fr);gap:13px;padding:11px}
+ .library-book img{width:92px;height:122px}
+ .library-book h3{font-size:16px}
+ .library-book p{font-size:12px}
+ .library-action{grid-column:auto;align-items:flex-start;flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){.library-feature img{transition:none}}
